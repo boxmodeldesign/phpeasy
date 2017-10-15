@@ -1,0 +1,9 @@
+/* phpEasy by Ben Schaefer */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}

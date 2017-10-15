@@ -2,7 +2,7 @@
     
     $base = "/phpeasy"; // change or remove depending on domain path
     $view = ""; // the page view to load; set in route definition
-    $title = ""; // title element for a particular page; set in defaultHTML or in a route definition
+    $title = "Home"; // title element for a particular page; set in route definition
 
     function currentURI() {
         $uri = substr($_SERVER['REQUEST_URI'], 0);
@@ -14,8 +14,7 @@
     }
 
     function defaultHTML() {
-        global $base, $title;
-        $title = "Home";
+        global $base;
         ?>
         <h2><?php echo "Hello World!"; ?></h2>
         <h3><?php echo currentURI(); ?></h3>
