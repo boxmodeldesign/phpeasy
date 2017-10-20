@@ -2,8 +2,23 @@
 <meta name="robots" content="all">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="keywords" content="phpEasy,Ben Schaefer,php,framework,web development">
-<meta name="description" content="phpEasy by Ben Schaefer">
+<?php
+    if ($view == "default") {
+        // default homepage meta content
+        ?>
+        <meta name="keywords" content="phpEasy,Ben Schaefer,php,framework,web development">
+        <meta name="description" content="phpEasy by Ben Schaefer">
+        <?php
+    } else if (include "routes/$view/meta.php") {
+        // include custom meta content
+    } else {
+        // include blank meta content
+        ?>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <?php
+    }
+?>
 
 <title><?php echo $title ?> | phpEasy</title>
 
